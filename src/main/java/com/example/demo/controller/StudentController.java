@@ -9,8 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.web.bind.annotation.*;
 
-@RestController
+@RestController//表示是个Controller
 public class StudentController {
+
     @Autowired
     private StudentService studentService;//把service层的数据导进来
 

@@ -12,11 +12,11 @@ import org.springframework.util.StringUtils;
 
 import java.util.List;
 
-//对接口的实现
-@Service
-public class StudentServiceImpl implements StudentService{
 
-    @Autowired
+@Service//方便这个对象被其他对象来注入
+public class StudentServiceImpl implements StudentService{//implements StudentService代表对StudentService接口的实现
+
+    @Autowired//表示把StudentRepository注入进来
     private StudentRepository studentRepository;
 
     @Override
@@ -47,7 +47,7 @@ public class StudentServiceImpl implements StudentService{
     }
 
     @Override
-    @Transactional
+    @Transactional//是 Spring 框架 中用于管理 数据库事务 的重要注解，它可以确保一组数据库操作要么全部成功执行，要么全部回滚（Rollback），从而保证数据的一致性和完整性。
     public StudentDTO updateStudentById(long id, String name, String email) {
         //首先要判断用户id是否存在
         Student studentInDB=studentRepository.findById(id).orElseThrow(()->new IllegalArgumentException("id:"+id+"不存在"));

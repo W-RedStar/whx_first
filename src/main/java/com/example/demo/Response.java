@@ -23,7 +23,7 @@ public   static Response<Void>newFail(String errorMsg){
     return response;
 }
 
-
+//Getter and Setter方法
     public T getData() {
         return data;
     }
