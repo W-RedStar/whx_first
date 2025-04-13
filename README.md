@@ -81,7 +81,7 @@ spring.datasource.password=
 
 选择如图：
 
-![image-20250412210947675](assets\images\image-20250412210947675.png)
+![image-20250412210947675](assets/images/image-20250412210947675.png)
 
 名字可以改，然后把文件解压，移动到自己的代码文件下
 
